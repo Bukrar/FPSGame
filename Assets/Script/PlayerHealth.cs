@@ -45,6 +45,8 @@ public class PlayerHealth : MonoBehaviour
         playerAudio.clip = deathClip;
         playerAudio.Play();
         playerAnimator.SetTrigger("Die");
+        GetComponent<PlayerMove>().enabled = false;
+        GetComponentInChildren<PlayerShoot>().enabled = false;
 
         if (PlayerDeathEvent != null)
         {

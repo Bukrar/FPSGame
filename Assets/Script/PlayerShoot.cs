@@ -19,7 +19,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Awake()
     {
-        enemyMask = LayerMask.GetMask("enemy");
+        enemyMask = LayerMask.GetMask("Enemy");
         gunParticle = GetComponent<ParticleSystem>();
         gunLineRenderer = GetComponent<LineRenderer>();
         gunAudioSource = GetComponent<AudioSource>();
@@ -39,7 +39,10 @@ public class PlayerShoot : MonoBehaviour
         ShootRay.origin = transform.position;
         ShootRay.direction = transform.forward;
         if (Physics.Raycast(ShootRay, out shootHit, range, enemyMask))
-        {
+        {           
+            EnemyHealth enemyHealth =
+                shootHit.collider.GetComponent<EnemyHealth>();
+            enemyHealth.TakeDamage(damage,shootHit.point);
             gunLineRenderer.SetPosition(1, shootHit.point);
         }
         else
