@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public GameObject enemy;
-    public float delayTime = 1f;
+    public float delayTime = 5f;
     public float repeatRate = 3f;
     public Transform[] spawnPoint;
     private bool playerIsDead = false;

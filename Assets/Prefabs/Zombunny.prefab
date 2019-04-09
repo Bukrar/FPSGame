@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 163398593}
   - component: {fileID: 163398594}
   - component: {fileID: 163398597}
-  - component: {fileID: 163398588}
+  - component: {fileID: 555822385252236494}
   - component: {fileID: 163398590}
   - component: {fileID: 163398591}
   - component: {fileID: 163398596}
@@ -199,7 +199,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &163398588
+--- !u!114 &555822385252236494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
